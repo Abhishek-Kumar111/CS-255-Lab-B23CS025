@@ -1,0 +1,34 @@
+
+body {
+    background-image: url("https://wallpaperset.com/w/full/7/5/a/545589.jpg");
+}
+
+body {
+    border: 3px dotted #161010;
+}
+
+label {
+    width: 200px;
+    display: inline-block;
+}
+
+.in {
+    text-align: center;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
+
+.padding {
+    margin-left: 9em;
+}
+
+.padd2 {
+    margin-left: 7.5em;
+}
+
+.shift {
+    margin-left: 5em;
+}
