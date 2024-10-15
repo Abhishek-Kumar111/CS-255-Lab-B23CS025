@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-image: url('https://images.unsplash.com/photo-1602128762607-04bdfc09e8e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg5NDR8MHwxfGFsbHwxfHx8fHx8fHwxNjA3OTMwMjI1&ixlib=rb-1.2.1&q=80&w=1920');
+            background-position: center;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 600px; 
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            backdrop-filter: blur(0.1px); 
+        }
+        .start-message {
+            position: absolute;
+            top: 90%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            z-index: 2;
+            width: 100%;
+            display: none; 
+        }
+        .fade {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 400px;
+        }
+
+        .fade img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 15px;
+        }
+        .active {
+            display: block;
+        }
+        .dynamic-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #ff6f61;
+            text-align: center;
+        }
+        .side-text {
+            position: fixed; 
+            top: 90%; 
+            left: 5%;
+            color: white;
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 100px;
+            height: 30px;
+            z-index: 2; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+      
+        <div class="side-text">
+            <h2>Welcome!</h2>
+            <p>Experience the beauty of nature through our images.</p>
+        </div>
+        <div id="startMessage" class="start-message">
+           <h1>Good Morning Everyone!</h1>
+           <p>This is a slideshow project demonstration.</p>
+        </div>
+        
+        <div class="fade">
+            <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image 1">
+        </div>
+        <div class="fade">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Image 2">
+        </div>
+        <div class="fade">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="Image 3">
+        </div>
+    </div>
+
+    <!-- Dynamic text to display after the message -->
+    <p id="dynamicText" class="dynamic-text"></p>
+
+    <script src="Obj8B.js"></script>
+    
+</body>
+</html>
